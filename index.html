@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Camilo Porfolio</title>
+    <link rel="icon" href="assets/images/logos/Logo.png" type="image/png">
+</head>
+
+<body onload="setLanguage('en')">
+
+<!-- Portfolio and for Language Selection -->
+<div id="header">
+    <h1 id="page-title"></h1>
+    <div class="dropdown">
+        <!-- Agregado id="language" al botón -->
+        <button class="language" id="language">EN</button>
+        <div class="dropdown-content">
+            <a href="#" onclick="setLanguage('en')">EN</a>
+            <a href="#" onclick="setLanguage('es')">ES</a>
+        </div>
+    </div>
+</div>
+
+<!-- Presentation Section -->
+<section id="presentation">
+    <h2 id="name"></h2>
+    <div>
+        <!-- <img src="assets/images/Photo.png" alt="Your Photo" width="150" height="150"> -->
+        <p id="student"></p>
+        <p id="university"></p>
+        <p id="degree"></p>
+        <p><a href="https://github.com/its-camilo">GitHub</a></p>
+        <p><a href="https://drive.google.com/file/d/1Jt3G9eEvax1HhJHHMUyXbxYypPeQeK2w/view?usp=drive_link">CV</a></p>
+        <p><a href="https://its-camilo.itch.io">Itchio</a></p>
+        <p><a href="https://linktr.ee/its_camilo">Linktree</a></p>
+    </div>
+</section>
+
+<!-- Personal Section -->
+<section id="personal">
+    <h1 id="about-me"></h1>
+    <p id="personal-description"></p>
+</section>
+
+<!-- Technologies Section -->
+<section id="technologies">
+    <h1 id="technologies-title"></h1>
+    <ul>
+        <li>
+            <a href="https://www.java.com" target="_blank">
+                <img src="assets/images/logos/Java.png" alt="Java Logo" width="50" height="50">Java
+            </a>
+        </li>
+        <li>
+            <a href="https://dotnet.microsoft.com/en-us/languages/csharp" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/910px-Logo_C_sharp.svg.png" alt="C# Logo" width="50" height="50">C#
+            </a>
+        </li>
+        <li>
+            <a href="http://www.ecmascript.org" target="_blank">
+                <img src="assets/images/logos/JavaScript.png" alt="Javascript Logo" width="50" height="50">JavaScript
+            </a>
+        </li>
+        <li>
+            <a href="https://isocpp.org" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png" alt="C++ Logo" width="50" height="50">C++
+            </a>
+        </li>
+        <li>
+            <a href="https://unity.com" target="_blank">
+                <img src="https://w7.pngwing.com/pngs/426/535/png-transparent-unity-new-logo-tech-companies-thumbnail.png" alt="Unity Logo" width="50" height="50">Unity
+            </a>
+        </li>
+        <li>
+            <a href="https://www.unrealengine.com/en-US" target="_blank">
+                <img src="https://e7.pngegg.com/pngimages/214/636/png-clipart-unreal-tournament-unreal-engine-4-fortnite-others-thumbnail.png" alt="Unreal Engine Logo" width="50" height="50">Unreal Engine
+            </a>
+        </li>
+        <li>
+            <a href="https://godotengine.org" target="_blank">
+                <img src="https://godotengine.org/assets/press/icon_color_outline.png" alt="Godot Logo" width="50" height="50">Godot
+            </a>
+        </li>
+        <li>
+            <a href="https://www.blender.org" target="_blank">
+                <img src="https://banner2.cleanpng.com/20181015/ryi/kisspng-blender-3d-computer-graphics-logo-filehippo-3d-mod-1713927535548.webp" alt="Blender Logo" width="50" height="50">Blender
+            </a>
+        </li>
+    </ul>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+    <h1 id="projects-title"></h1>
+    <ul>
+        <li>
+
+            <a href="https://its-camilo.itch.io/space-shooter-pro" target="_blank">
+                <img src="https://img.itch.zone/aW1hZ2UvMjAyODU2NC8xMzE5NzY5NS5wbmc=/347x500/%2BLVJlF.png" alt="Space Shooter Pro Preview">
+            </a>
+            <div class="project-tech">
+
+                <div class="links">
+                    <a id="space-shooter-pro" href="https://its-camilo.itch.io/space-shooter-pro" target="_blank"></a>
+                    <a class="repo" href="https://github.com/its-camilo/Space-Shooter" target="_blank"></a>
+                </div>
+
+                <p id="space-shooter-pro-desc"></p>
+                <a href="https://unity.com" target="_blank">
+                    <img src="https://w7.pngwing.com/pngs/426/535/png-transparent-unity-new-logo-tech-companies-thumbnail.png" alt="Unity Logo" width="50" height="50">
+                </a>
+                <a href="https://dotnet.microsoft.com/en-us/languages/csharp" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/910px-Logo_C_sharp.svg.png" alt="C# Logo" width="50" height="50">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="assets/images/logos/GitHub.png" alt="Git Hub pages Logo" width="50" height="50">
+                </a>
+            </div>
+        </li>
+        <li>
+            <a href="https://promediosunal.github.io/promediosunal/" target="_blank">
+                <img src="assets/images/previews/PUN.jpg" alt="Promedios Unal Preview" width="347" height="200">
+            </a>
+            <div class="project-tech">
+                <div class="links">
+                    <a id="promedios-unal" href="https://promediosunal.github.io/promediosunal/" target="_blank"></a>
+                    <a class="repo" href="https://github.com/promediosunal/promediosunal" target="_blank"></a>
+                    <p id="promedios-unal-desc"></p>
+                </div>
+
+                <a href="http://www.ecmascript.org" target="_blank">
+                    <img src="assets/images/logos/JavaScript.png" alt="Javascript Logo" width="50" height="50">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="assets/images/logos/GitHub.png" alt="Git Hub pages Logo" width="50" height="50">
+                </a>
+            </div>
+        </li>
+        <li>
+            <a href="https://its-camilo.itch.io/the-great-fleece" target="_blank">
+                <img src="https://img.itch.zone/aW1hZ2UvMjgyNjk0Ni8xNjg4OTMzMi5wbmc=/347x500/l2ANrT.png" alt="The Great Fleece Preview">
+            </a>
+            <div class="project-tech">
+
+                <div class="links">
+                    <a id="the-great-fleece" href="https://its-camilo.itch.io/the-great-fleece" target="_blank"></a>
+                    <a class="repo" href="https://github.com/its-camilo/The-Great-Fleece" target="_blank"></a>
+                    <p id="the-great-fleece-desc"></p>
+                </div>
+
+                <a href="https://unity.com" target="_blank">
+                    <img src="https://w7.pngwing.com/pngs/426/535/png-transparent-unity-new-logo-tech-companies-thumbnail.png" alt="Unity Logo" width="50" height="50">
+                </a>
+                <a href="https://dotnet.microsoft.com/en-us/languages/csharp" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/910px-Logo_C_sharp.svg.png" alt="C# Logo" width="50" height="50">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="assets/images/logos/GitHub.png" alt="Git Hub pages Logo" width="50" height="50">
+                </a>
+            </div>
+        </li>
+    </ul>
+</section>
+
+</body>
+
+</html>
