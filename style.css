@@ -224,3 +224,14 @@ p{
         text-align: center;
     }
 }
+
+/* Estilos para el menú desplegable de categorías */
+.dropdown .category {
+    padding: 12px 16px;
+    border: none;
+    width: 80px;
+    background-color: antiquewhite;
+    font-family: Agency FB, serif;
+    font-size: medium;
+    color: #6e1e00;
+}

@@ -63,3 +63,15 @@ function setLanguage(language) {
         repoElements[i].textContent = texts[language].repo;
     }
 }
+
+function filterProjects(category) {
+    const projects = document.querySelectorAll('#projects-list li');
+    projects.forEach(project => {
+        if (category === 'all' || project.classList.contains(category)) {
+            project.style.display = 'flex';
+        } else {
+            project.style.display = 'none';
+        }
+    });
+    document.getElementById('category').textContent = category.charAt(0).toUpperCase() + category.slice(1);
+}
