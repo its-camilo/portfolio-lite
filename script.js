@@ -79,9 +79,16 @@ function filterProjects(category) {
 document.addEventListener('DOMContentLoaded', function() {
     const dropdownButton = document.querySelector('.dropdown .language');
     const dropdownContent = document.querySelector('.dropdown .dropdown-content');
+    const dropdownItems = dropdownContent.querySelectorAll('a');
 
     dropdownButton.addEventListener('click', function() {
         dropdownContent.classList.toggle('show');
+    });
+
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function() {
+            dropdownContent.classList.remove('show');
+        });
     });
 
     // Cerrar el dropdown si se hace clic fuera de él
