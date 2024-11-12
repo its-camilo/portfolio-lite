@@ -238,14 +238,28 @@ p{
 
 /* Estilos para el menú desplegable */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 80px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    display: block; /* Cambiado a block para permitir la transición */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
 }
 
 .dropdown-content.show {
-    display: block;
+    max-height: 200px; /* Ajusta este valor según el contenido */
+    opacity: 1;
+}
+
+/* Estilos para el menú desplegable */
+.dropdown-content-category {
+    display: block; /* Cambiado a block para permitir la transición */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.dropdown-content-category.show {
+    max-height: 200px; /* Ajusta este valor según el contenido */
+    opacity: 1;
 }

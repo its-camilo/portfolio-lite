@@ -77,26 +77,33 @@ function filterProjects(category) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const dropdownButton = document.querySelector('.dropdown .language');
-    const dropdownContent = document.querySelector('.dropdown .dropdown-content');
-    const dropdownItems = dropdownContent.querySelectorAll('a');
+    const dropdownButtons = document.querySelectorAll('.dropdown .language, .dropdown .category');
+    const dropdownContents = document.querySelectorAll('.dropdown .dropdown-content, .dropdown .dropdown-content-category');
+    const dropdownItems = document.querySelectorAll('.dropdown .dropdown-content a, .dropdown .dropdown-content-category a');
 
-    dropdownButton.addEventListener('click', function() {
-        dropdownContent.classList.toggle('show');
+    dropdownButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const dropdownContent = this.nextElementSibling;
+            dropdownContent.classList.toggle('show');
+        });
     });
 
     dropdownItems.forEach(item => {
         item.addEventListener('click', function() {
+            const dropdownContent = this.closest('.dropdown-content, .dropdown-content-category');
             dropdownContent.classList.remove('show');
+            setLanguage(item.getAttribute('data-lang')); // Assuming you have data-lang attributes for language options
         });
     });
 
-    // Cerrar el dropdown si se hace clic fuera de él
+    // Close the dropdown if clicked outside of it
     window.addEventListener('click', function(event) {
-        if (!event.target.matches('.dropdown .language')) {
-            if (dropdownContent.classList.contains('show')) {
-                dropdownContent.classList.remove('show');
-            }
+        if (!event.target.matches('.dropdown .language, .dropdown .category')) {
+            dropdownContents.forEach(content => {
+                if (content.classList.contains('show')) {
+                    content.classList.remove('show');
+                }
+            });
         }
     });
 });
