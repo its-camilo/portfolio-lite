@@ -75,3 +75,21 @@ function filterProjects(category) {
     });
     document.getElementById('category').textContent = category.charAt(0).toUpperCase() + category.slice(1);
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownButton = document.querySelector('.dropdown .language');
+    const dropdownContent = document.querySelector('.dropdown .dropdown-content');
+
+    dropdownButton.addEventListener('click', function() {
+        dropdownContent.classList.toggle('show');
+    });
+
+    // Cerrar el dropdown si se hace clic fuera de él
+    window.addEventListener('click', function(event) {
+        if (!event.target.matches('.dropdown .language')) {
+            if (dropdownContent.classList.contains('show')) {
+                dropdownContent.classList.remove('show');
+            }
+        }
+    });
+});
