@@ -216,7 +216,7 @@ p{
 }
 
 #technologies img:hover, #projects img:hover{
-   filter: brightness(130%);
+   filter: brightness(113%);
 }
 
 /* Styles for mobile screens */
@@ -258,7 +258,7 @@ p{
 }
 
 .dropdown-content.show {
-    max-height: 200px; /* Ajusta este valor según el contenido */
+    max-height: 400px; /* Ajusta este valor según el contenido */
     opacity: 1;
 }
 
@@ -272,6 +272,6 @@ p{
 }
 
 .dropdown-content-category.show {
-    max-height: 200px; /* Ajusta este valor según el contenido */
+    max-height: 400px; /* Ajusta este valor según el contenido */
     opacity: 1;
 }

@@ -22,6 +22,8 @@ function setLanguage(language) {
             marsmarineDesc: "The red planet is unforgiving, and the alien threat never stops. How long can you survive?. Made with Unreal Engine.",
             dungeonescape: "Dungeon Escape",
             dungeonescapeDesc: "Can you defeat the monsters, collect the diamonds, and escape before it's too late? The dungeon awaits!. Made with Unity and C#.",
+            clock: "Clock",
+            clockDesc: "A clock and temperature and humidity sensor that sends the data to ThingSpeak and can be controlled through buttons or a web terminal. Made with C++.",
         },
         es: {
             pageTitle: "Portafolio de Proyectos",
@@ -45,6 +47,8 @@ function setLanguage(language) {
             marsmarineDesc: "El planeta rojo no perdona, y la amenaza alienígena nunca se detiene. ¿Cuánto tiempo puedes sobrevivir?. Hecho con Unreal Engine.",
             dungeonescape: "Dungeon Escape",
             dungeonescapeDesc: "¿Puedes derrotar a los monstruos, recoger los diamantes y escapar antes de que sea demasiado tarde? ¡La mazmorras te esperan!. Hecho con Unity y C#.",
+            clock: "Reloj",
+            clockDesc: "Un reloj y sensor de temperatura y humedad que envía los datos a ThingSpeak y se puede controlar a través de botones o un terminal web. Hecho con C++.",
         }
     };
 
@@ -69,6 +73,8 @@ function setLanguage(language) {
     document.getElementById("mars-marine-desc").textContent = texts[language].marsmarineDesc;
     document.getElementById("dungeon-escape").textContent = texts[language].dungeonescape;
     document.getElementById("dungeon-escape-desc").textContent = texts[language].dungeonescapeDesc;
+    document.getElementById("clock").textContent = texts[language].clock;
+    document.getElementById("clock-desc").textContent = texts[language].clockDesc;
 
     const repoElements = document.getElementsByClassName("repo");
     for (let i = 0; i < repoElements.length; i++) {
@@ -118,4 +124,48 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const clockCarousel = document.getElementById('clock-carousel');
+    if (clockCarousel) {
+        // Define las URLs de las imágenes para el carrusel
+        const carouselImages = [
+            // URL de la imagen original
+            clockCarousel.src,
+            // Agrega aquí las URLs de tus otras imágenes
+            "assets/images/previews/Reloj/1.PNG",
+            "assets/images/previews/Reloj/2.PNG",
+            "assets/images/previews/Reloj/3.PNG",
+            "assets/images/previews/Reloj/4.PNG",
+        ];
+
+        let carouselIndex = 0;
+        let carouselInterval;
+        let isHovering = false;
+
+        // Función para cambiar la imagen
+        function changeImage() {
+            carouselIndex = (carouselIndex + 1) % carouselImages.length;
+            clockCarousel.src = carouselImages[carouselIndex];
+        }
+
+        // Iniciar carrusel cuando el mouse está sobre la imagen
+        clockCarousel.addEventListener('mouseenter', function() {
+            isHovering = true;
+            // Verificar que no exista un intervalo activo antes de crear uno nuevo
+            if (!carouselInterval) {
+                carouselInterval = setInterval(changeImage, 1500);
+            }
+        });
+
+        // Detener carrusel cuando el mouse sale
+        clockCarousel.addEventListener('mouseleave', function() {
+            isHovering = false;
+            // Solo limpiar el intervalo, no cambiar la imagen
+            clearInterval(carouselInterval);
+            carouselInterval = null;
+            // Ya no volvemos a la imagen original
+        });
+    }
 });
