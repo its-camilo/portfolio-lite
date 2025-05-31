@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Sección head que contiene información meta, estilos y scripts -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +11,14 @@
     <link rel="icon" href="assets/images/logos/Logo.png" type="image/png">
 </head>
 
+<!-- Sección body con evento onload para establecer el idioma inicial -->
 <body onload="setLanguage('en')">
 
-<!-- Portfolio and for Language Selection -->
+<!-- Sección de encabezado con título y selector de idioma -->
 <div id="header">
     <h1 id="page-title"></h1>
     <div class="dropdown">
-        <!-- Agregado id="language" al botón -->
+        <!-- Botón de selección de idioma y menú desplegable -->
         <button class="language" id="language">EN</button>
         <div class="dropdown-content">
             <a href="#" onclick="setLanguage('en')">EN</a>
@@ -25,30 +27,39 @@
     </div>
 </div>
 
-<!-- Presentation Section -->
+<!-- Sección de presentación con información personal -->
 <section id="presentation">
     <h2 id="name"></h2>
     <div>
+        <!-- Foto de perfil comentada -->
         <!-- <img src="assets/images/Photo.png" alt="Your Photo" width="150" height="150"> -->
+        <!-- Párrafos de información personal -->
         <p id="student"></p>
         <p id="university"></p>
         <p id="degree"></p>
-        <p><a href="https://github.com/its-camilo">GitHub</a></p>
-        <p><a href="https://drive.google.com/drive/folders/10TAY8yCDxAuCCGQxvKdTVb6UMgaDsJb4?usp=sharing">CV</a></p>
-        <p><a href="https://linktr.ee/its_camilo">Linktree</a></p>
-        <p><a href="https://its-camilo.itch.io">Itchio</a></p>
+        <!-- Enlaces sociales y profesionales -->
+        <div class="links-row">
+            <a href="https://github.com/its-camilo">GitHub</a>
+            <a href="https://drive.google.com/drive/folders/10TAY8yCDxAuCCGQxvKdTVb6UMgaDsJb4?usp=sharing">CV</a>
+            <a href="https://play.google.com/store/apps/dev?id=5796610576483017103">Google Play</a>
+        </div>
+        <div class="links-row">
+            <a href="https://linktr.ee/its_camilo">Linktree</a>
+            <a href="https://its-camilo.itch.io">Itchio</a>
+        </div>
     </div>
 </section>
 
-<!-- Personal Section -->
+<!-- Sección personal con información sobre mí -->
 <section id="personal">
     <h1 id="about-me"></h1>
     <p id="personal-description"></p>
 </section>
 
-<!-- Technologies Section -->
+<!-- Sección de tecnologías mostrando habilidades técnicas -->
 <section id="technologies">
     <h1 id="technologies-title"></h1>
+    <!-- Lista de habilidades tecnológicas con logos y enlaces -->
     <ul>
         <li>
             <a href="https://www.java.com" target="_blank">
@@ -93,9 +104,10 @@
     </ul>
 </section>
 
-<!-- Projects Section -->
+<!-- Sección de proyectos con portafolio filtrable -->
 <section id="projects">
     <h1 id="projects-title"></h1>
+    <!-- Menú desplegable para filtrar categorías de proyectos -->
     <div class="dropdown">
         <button class="category" id="category">All</button>
         <div class="dropdown-content">
@@ -106,19 +118,20 @@
             <a href="#" onclick="filterProjects('embedded')">Embedded</a>
         </div>
     </div>
+    <!-- Lista de proyectos del portafolio -->
     <ul id="projects-list">
 
+        <!-- Proyecto Mars Marine - Unreal Engine -->
         <li class="unreal">
             <a href="https://its-camilo.itch.io/mars-marine" target="_blank">
-                <img src="https://img.itch.zone/aW1hZ2UvMzMyMDIyOC8xOTgyNzY4MC5wbmc=/347x500/5WnHH6.png" alt="Mars Marine Preview">
+                <img src="https://img.itch.zone/aW1hZ2UvMzMyMDIyOC8xOTgyNzY4MC5wbmc=/347x500/5WnHH6.png"
+                     alt="Mars Marine Preview">
             </a>
             <div class="project-tech">
-
                 <div class="links">
                     <a id="mars-marine" href="https://its-camilo.itch.io/mars-marine" target="_blank"></a>
                     <a class="repo" href="https://github.com/its-camilo/Mars-Marine" target="_blank"></a>
                 </div>
-
                 <p id="mars-marine-desc"></p>
                 <a href="https://www.unrealengine.com/en-US" target="_blank">
                     <img src="assets/images/logos/Unreal.svg" alt="Unreal Engine Logo" width="50" height="50">
@@ -129,17 +142,17 @@
             </div>
         </li>
 
+        <!-- Proyecto Dungeon Escape - Unity -->
         <li class="unity">
-            <a href="https://its-camilo.itch.io/dungeon-escape" target="_blank">
-                <img src="https://img.itch.zone/aW1hZ2UvMzMwNDAxMi8xOTczMTY3OS5wbmc=/347x500/QQJEUl.png" alt="Space Shooter Pro Preview">
+            <a href="https://play.google.com/store/apps/details?id=com.TechNestGamesStudios.DungeonEscape"
+               target="_blank">
+                <img src="assets/images/previews/DungeonEscape.png" alt="Space Shooter Pro Preview" width="347">
             </a>
             <div class="project-tech">
-
                 <div class="links">
                     <a id="dungeon-escape" href="https://its-camilo.itch.io/dungeon-escape" target="_blank"></a>
                     <a class="repo" href="https://github.com/its-camilo/Dungeon-Scape" target="_blank"></a>
                 </div>
-
                 <p id="dungeon-escape-desc"></p>
                 <a href="https://unity.com" target="_blank">
                     <img src="assets/images/logos/Unity.png" alt="Unity Logo" width="50" height="50">
@@ -153,18 +166,17 @@
             </div>
         </li>
 
-
+        <!-- Proyecto Space Shooter Pro - Unity -->
         <li class="unity">
             <a href="https://its-camilo.itch.io/space-shooter-pro" target="_blank">
-                <img src="https://img.itch.zone/aW1hZ2UvMjAyODU2NC8xMzE5NzY5NS5wbmc=/347x500/%2BLVJlF.png" alt="Space Shooter Pro Preview">
+                <img src="https://img.itch.zone/aW1hZ2UvMjAyODU2NC8xMzE5NzY5NS5wbmc=/347x500/%2BLVJlF.png"
+                     alt="Space Shooter Pro Preview">
             </a>
             <div class="project-tech">
-
                 <div class="links">
                     <a id="space-shooter-pro" href="https://its-camilo.itch.io/space-shooter-pro" target="_blank"></a>
                     <a class="repo" href="https://github.com/its-camilo/Space-Shooter" target="_blank"></a>
                 </div>
-
                 <p id="space-shooter-pro-desc"></p>
                 <a href="https://unity.com" target="_blank">
                     <img src="assets/images/logos/Unity.png" alt="Unity Logo" width="50" height="50">
@@ -178,7 +190,7 @@
             </div>
         </li>
 
-
+        <!-- Proyecto Promedios UNAL - Web -->
         <li class="web">
             <a href="https://promediosunal.github.io/promediosunal/" target="_blank">
                 <img src="assets/images/previews/PUN.jpg" alt="Promedios Unal Preview" width="347" height="200">
@@ -189,7 +201,6 @@
                     <a class="repo" href="https://github.com/promediosunal/promediosunal" target="_blank"></a>
                     <p id="promedios-unal-desc"></p>
                 </div>
-
                 <a href="http://www.ecmascript.org" target="_blank">
                     <img src="assets/images/logos/JavaScript.png" alt="Javascript Logo" width="50" height="50">
                 </a>
@@ -199,9 +210,11 @@
             </div>
         </li>
 
+        <!-- Proyecto Reloj - Embebido -->
         <li class="embedded">
             <a href="https://github.com/its-camilo/Clock" target="_blank">
-                <img id="clock-carousel" src="assets/images/previews/Reloj/0.jpg" alt="Clock Preview" width="347" height="240">
+                <img id="clock-carousel" src="assets/images/previews/Reloj/0.jpg" alt="Clock Preview" width="347"
+                     height="240">
             </a>
             <div class="project-tech">
                 <div class="links">
@@ -209,26 +222,24 @@
                     <a class="repo" href="https://github.com/its-camilo/Clock" target="_blank"></a>
                     <p id="clock-desc"></p>
                 </div>
-
                 <a href="https://isocpp.org" target="_blank">
                     <img src="assets/images/logos/CPP.png" alt="C++ Logo" width="50" height="50">
                 </a>
             </div>
         </li>
 
-
+        <!-- Proyecto The Great Fleece - Unity -->
         <li class="unity">
             <a href="https://its-camilo.itch.io/the-great-fleece" target="_blank">
-                <img src="https://img.itch.zone/aW1hZ2UvMjgyNjk0Ni8xNjg4OTMzMi5wbmc=/347x500/l2ANrT.png" alt="The Great Fleece Preview">
+                <img src="https://img.itch.zone/aW1hZ2UvMjgyNjk0Ni8xNjg4OTMzMi5wbmc=/347x500/l2ANrT.png"
+                     alt="The Great Fleece Preview">
             </a>
             <div class="project-tech">
-
                 <div class="links">
                     <a id="the-great-fleece" href="https://its-camilo.itch.io/the-great-fleece" target="_blank"></a>
                     <a class="repo" href="https://github.com/its-camilo/The-Great-Fleece" target="_blank"></a>
                     <p id="the-great-fleece-desc"></p>
                 </div>
-
                 <a href="https://unity.com" target="_blank">
                     <img src="assets/images/logos/Unity.png" alt="Unity Logo" width="50" height="50">
                 </a>
@@ -240,7 +251,6 @@
                 </a>
             </div>
         </li>
-
 
     </ul>
 </section>

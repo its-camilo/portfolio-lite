@@ -1,4 +1,5 @@
 function setLanguage(language) {
+    // Objeto que contiene los textos en diferentes idiomas para la internacionalización de la página
     const texts = {
         en: {
             pageTitle: "Projects Portfolio",
@@ -8,10 +9,10 @@ function setLanguage(language) {
             student: "Student | Junior Game Developer",
             university: "National University of Colombia",
             degree: "Computer & Systems Engineering",
-            personalDescription:"My name is Camilo. I have experience programming video game mechanics and systems, as well as developing full-stack web applications. I am proficient in using various design patterns, such as the singleton pattern and object-oriented programming.",
+            personalDescription: "My name is Camilo. I have experience programming video game mechanics and systems, as well as developing full-stack web applications. I am proficient in using various design patterns, such as the singleton pattern and object-oriented programming.",
             technologies: "Technologies",
             projects: "Projects",
-            repo:"Repo",
+            repo: "Repo",
             spaceshooterpro: "Space Shooter Pro",
             spaceshooterproDesc: "In this exciting game, eliminate your alien rivals while moving through space and avoiding dangers. Made with Unity and C#.",
             thegreatfleece: "The Great Fleece",
@@ -33,10 +34,10 @@ function setLanguage(language) {
             student: "Estudiante | Junior Game Developer",
             university: "Universidad Nacional de Colombia",
             degree: "Ingeniería de Sistemas y Computación",
-            personalDescription:"Mi nombre es Camilo. Tengo experiencia en la programación de mecánicas y sistemas de videojuegos, así como en el desarrollo de aplicaciones web full-stack. Soy competente en el uso de varios patrones de diseño, como el patrón singleton y la programación orientada a objetos.",
+            personalDescription: "Mi nombre es Camilo. Tengo experiencia en la programación de mecánicas y sistemas de videojuegos, así como en el desarrollo de aplicaciones web full-stack. Soy competente en el uso de varios patrones de diseño, como el patrón singleton y la programación orientada a objetos.",
             technologies: "Tecnologías",
             projects: "Proyectos",
-            repo:"Repositorio",
+            repo: "Repositorio",
             spaceshooterpro: "Space Shooter Pro",
             spaceshooterproDesc: "En este emocionante juego, elimina a tus rivales alienígenas mientras te mueves por el espacio y evitas peligros. Hecho con Unity y C#.",
             thegreatfleece: "The Great Fleece",
@@ -52,7 +53,7 @@ function setLanguage(language) {
         }
     };
 
-    // Actualiza los textos en la página
+    // Actualiza todos los elementos de texto en la página con el idioma seleccionado
     document.getElementById("page-title").textContent = texts[language].pageTitle;
     document.getElementById("language").textContent = texts[language].language;
     document.getElementById("about-me").textContent = texts[language].aboutMe;
@@ -76,12 +77,14 @@ function setLanguage(language) {
     document.getElementById("clock").textContent = texts[language].clock;
     document.getElementById("clock-desc").textContent = texts[language].clockDesc;
 
+    // Actualiza todos los elementos con la clase "repo"
     const repoElements = document.getElementsByClassName("repo");
     for (let i = 0; i < repoElements.length; i++) {
         repoElements[i].textContent = texts[language].repo;
     }
 }
 
+// Función para filtrar proyectos por categoría
 function filterProjects(category) {
     const projects = document.querySelectorAll('#projects-list li');
     projects.forEach(project => {
@@ -94,28 +97,32 @@ function filterProjects(category) {
     document.getElementById('category').textContent = category.charAt(0).toUpperCase() + category.slice(1);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+// Configuración de los menús desplegables cuando el DOM está cargado
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtiene referencias a los elementos del menú desplegable
     const dropdownButtons = document.querySelectorAll('.dropdown .language, .dropdown .category');
     const dropdownContents = document.querySelectorAll('.dropdown .dropdown-content, .dropdown .dropdown-content-category');
     const dropdownItems = document.querySelectorAll('.dropdown .dropdown-content a, .dropdown .dropdown-content-category a');
 
+    // Agrega listeners para mostrar/ocultar menús desplegables
     dropdownButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const dropdownContent = this.nextElementSibling;
             dropdownContent.classList.toggle('show');
         });
     });
 
+    // Maneja la selección de elementos del menú
     dropdownItems.forEach(item => {
-        item.addEventListener('click', function() {
+        item.addEventListener('click', function () {
             const dropdownContent = this.closest('.dropdown-content, .dropdown-content-category');
             dropdownContent.classList.remove('show');
-            setLanguage(item.getAttribute('data-lang')); // Assuming you have data-lang attributes for language options
+            setLanguage(item.getAttribute('data-lang'));
         });
     });
 
-    // Close the dropdown if clicked outside of it
-    window.addEventListener('click', function(event) {
+    // Cierra los menús desplegables al hacer clic fuera de ellos
+    window.addEventListener('click', function (event) {
         if (!event.target.matches('.dropdown .language, .dropdown .category')) {
             dropdownContents.forEach(content => {
                 if (content.classList.contains('show')) {
@@ -126,14 +133,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+// Configuración del carrusel de imágenes cuando el DOM está cargado
+document.addEventListener('DOMContentLoaded', function () {
     const clockCarousel = document.getElementById('clock-carousel');
     if (clockCarousel) {
-        // Define las URLs de las imágenes para el carrusel
+        // Arreglo con las URLs de las imágenes para el carrusel
         const carouselImages = [
-            // URL de la imagen original
             clockCarousel.src,
-            // Agrega aquí las URLs de tus otras imágenes
             "assets/images/previews/Reloj/1.PNG",
             "assets/images/previews/Reloj/2.PNG",
             "assets/images/previews/Reloj/3.PNG",
@@ -144,28 +150,25 @@ document.addEventListener('DOMContentLoaded', function() {
         let carouselInterval;
         let isHovering = false;
 
-        // Función para cambiar la imagen
+        // Cambia la imagen actual del carrusel
         function changeImage() {
             carouselIndex = (carouselIndex + 1) % carouselImages.length;
             clockCarousel.src = carouselImages[carouselIndex];
         }
 
-        // Iniciar carrusel cuando el mouse está sobre la imagen
-        clockCarousel.addEventListener('mouseenter', function() {
+        // Inicia el carrusel al pasar el mouse sobre la imagen
+        clockCarousel.addEventListener('mouseenter', function () {
             isHovering = true;
-            // Verificar que no exista un intervalo activo antes de crear uno nuevo
             if (!carouselInterval) {
                 carouselInterval = setInterval(changeImage, 1500);
             }
         });
 
-        // Detener carrusel cuando el mouse sale
-        clockCarousel.addEventListener('mouseleave', function() {
+        // Detiene el carrusel cuando el mouse sale de la imagen
+        clockCarousel.addEventListener('mouseleave', function () {
             isHovering = false;
-            // Solo limpiar el intervalo, no cambiar la imagen
             clearInterval(carouselInterval);
             carouselInterval = null;
-            // Ya no volvemos a la imagen original
         });
     }
 });

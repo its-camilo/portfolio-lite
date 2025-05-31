@@ -1,277 +1,367 @@
-/* General Styles */
-body {
-    font-family: math;
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    color: #6e1e00;
-    line-height: 1.6;
-}
-
-h1 {
-    color: #6e1e00;
-}
-
-h2 {
-    color: sandybrown;
-}
-
+/* Estilo de los enlaces */
 a {
     color: sandybrown;
     text-decoration: none;
 }
 
+/* Efecto hover en enlaces */
 a:hover {
     text-decoration: underline;
 }
 
-p{
+/* Estilos generales del cuerpo de la página */
+body {
+    background-color: white;
+    color: #6e1e00;
+    font-family: math;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Color de los títulos principales */
+h1 {
+    color: #6e1e00;
+}
+
+/* Color de los subtítulos */
+h2 {
+    color: sandybrown;
+}
+
+/* Ancho máximo de los párrafos */
+p {
     max-width: 400px;
 }
 
-/* Container */
-#presentation, #technologies, #projects, #personal{
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 800px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-#header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 15px;
-}
-
-
-#presentation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: antiquewhite;
-}
-
-#personal p{
-    display: contents;
-}
-
-#technologies, #projects {
-    background: #ffffff;
-}
-
-/* Presentation Section */
-#presentation img {
-    display: block;
-    margin: 0 auto 20px;
-    border-radius: 50%;
-}
-
-#presentation h2 {
-    text-align: center;
-    font-size: 24px;
-}
-
-#presentation p {
-    text-align: center;
-    margin: 0 15px;
-}
-
-/* Technologies Section */
-#technologies ul {
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-
-}
-
-#technologies li {
-    display: flex;
-    align-items: center;
-    margin: 10px 20px;
-}
-
-#technologies img {
-    margin-right: 10px;
-    width: 40px;
-    height: 40px;
-}
-
-/* Projects Section */
-#projects ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#projects li {
-    display: inline-flex;
-    margin-bottom: 20px;
-    width: 100%;
-    border-bottom: 1px solid sandybrown;
-    padding-bottom: 30px;
-    align-items: center;
-}
-
-#projects img {
-    max-height: 300px;
-    border-radius: 8px;
-}
-
-#projects div {
-    max-width: 600px;
-    text-align: center;
-}
-
-#projects li a {
-    font-weight: bold;
-    margin-right: 15px;
-    font-size: 18px;
-}
-
-#projects p {
-    margin: 15px 0;
-    font-size: 16px;
-    text-align: justify;
-}
-
-/* Estilos para el menú desplegable */
+/* Contenedor del menú desplegable */
 .dropdown {
-    position: relative;
     display: inline-block;
+    position: relative;
 }
 
+/* Botón de categoría en el menú desplegable */
+.dropdown .category {
+    background-color: antiquewhite;
+    border: none;
+    color: #6e1e00;
+    font-family: Agency FB, serif;
+    font-size: medium;
+    padding: 12px 16px;
+    width: 80px;
+}
+
+/* Contenedor del contenido desplegable */
 .dropdown-content {
-    display: none;
-    position: absolute;
     background-color: #f9f9f9;
-    min-width: 80px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    display: none;
+    min-width: 80px;
+    position: absolute;
     z-index: 1;
 }
 
-.dropdown-content a {
-    padding: 12px 16px;
-    text-decoration: none;
+/* Animación del contenido desplegable */
+.dropdown-content {
     display: block;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
 }
 
+/* Enlaces dentro del menú desplegable */
+.dropdown-content a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+/* Efecto hover en enlaces del menú desplegable */
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
 
-.dropdown:hover .dropdown-content {
+/* Contenedor de categorías desplegables */
+.dropdown-content-category {
     display: block;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
 }
 
-.dropdown:hover .language {
-    background-color: sandybrown;
-    color: white;
+/* Clase para mostrar categorías desplegables */
+.dropdown-content-category.show {
+    max-height: 400px;
+    opacity: 1;
 }
 
-.language {
-    padding: 12px 16px;
-    border: none;
-    width: 80px;
-    background-color: antiquewhite;
-    font-family: Agency FB, serif;
-    font-size: medium;
-    color: #6e1e00;
+/* Clase para mostrar contenido desplegable */
+.dropdown-content.show {
+    max-height: 400px;
+    opacity: 1;
 }
 
-/* Añade esto para el efecto hover del botón de categoría */
+/* Efecto hover en el botón de categoría */
 .dropdown:hover .category {
     background-color: sandybrown;
     color: white;
 }
 
-/* Asegura que el contenido del dropdown de categoría se muestre al hacer hover */
+/* Mostrar contenido al hacer hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Mostrar categorías al hacer hover */
 .dropdown:hover .dropdown-content-category {
     max-height: 200px;
     opacity: 1;
 }
 
-.project-tech {
-    display: flex;
-    flex-wrap: wrap;
+/* Efecto hover en el selector de idioma */
+.dropdown:hover .language {
+    background-color: sandybrown;
+    color: white;
 }
 
-.project-tech p {
-    width: 100%;
+/* Estilo del selector de idioma */
+.language {
+    background-color: antiquewhite;
+    border: none;
+    color: #6e1e00;
+    font-family: Agency FB, serif;
+    font-size: medium;
+    padding: 12px 16px;
+    width: 80px;
 }
 
-.links{
+/* Contenedor de enlaces */
+.links {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-#projects img{
+/* Fila de enlaces */
+.links-row {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+/* Enlaces dentro de las filas */
+.links-row a {
+    padding: 5px 5px;
+}
+
+/* Contenedor de tecnologías de proyecto */
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Párrafos dentro de tecnologías de proyecto */
+.project-tech p {
+    width: 100%;
+}
+
+/* Cabecera de la página */
+#header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+/* Párrafos en sección personal */
+#personal p {
+    display: contents;
+}
+
+/* Sección de presentación */
+#presentation {
+    align-items: center;
+    background: antiquewhite;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Subtítulos en presentación */
+#presentation h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Imagen de perfil */
+#presentation img {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Párrafos en presentación */
+#presentation p {
+    margin: 0 15px;
+    text-align: center;
+}
+
+/* Estilos comunes de secciones principales */
+#presentation, #technologies, #projects, #personal {
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Contenedores en sección de proyectos */
+#projects div {
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Imágenes de proyectos */
+#projects img {
+    border-radius: 8px;
+    max-height: 300px;
     max-width: 400px;
 }
 
-#technologies img:hover, #projects img:hover{
-   filter: brightness(113%);
+/* Elementos de lista en proyectos */
+#projects li {
+    align-items: center;
+    border-bottom: 1px solid sandybrown;
+    display: inline-flex;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    width: 100%;
 }
 
-/* Styles for mobile screens */
+/* Enlaces en elementos de lista de proyectos */
+#projects li a {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+/* Párrafos en proyectos */
+#projects p {
+    font-size: 16px;
+    margin: 15px 0;
+    text-align: justify;
+}
+
+/* Lista de proyectos */
+#projects ul {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+
+/* Imágenes en sección de tecnologías */
+#technologies img {
+    height: 40px;
+    margin-right: 10px;
+    width: 40px;
+}
+
+/* Efecto hover en imágenes */
+#technologies img:hover, #projects img:hover {
+    filter: brightness(113%);
+}
+
+/* Elementos de lista en tecnologías */
+#technologies li {
+    align-items: center;
+    display: flex;
+    margin: 10px 20px;
+}
+
+/* Lista de tecnologías */
+#technologies ul {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+}
+
+/* Fondo de secciones principales */
+#technologies, #projects {
+    background: #ffffff;
+}
+
+/* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
-    /* Adjust the max-width value as needed */
+    /* Ajustes de contenedores de proyectos */
+    #projects div {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Garantizar que el dropdown de categorías permanezca en la izquierda */
+    #projects .dropdown {
+        align-self: flex-start;
+        text-align: left;
+        margin-left: 0;
+    }
+
+    /* Ajustes de imágenes en proyectos */
+    #projects img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* Ajustes de elementos de lista en proyectos */
     #projects li {
         flex-direction: column;
         max-height: none;
     }
 
-    #projects img {
-        max-width: fit-content;
+    /* Grid para lista de tecnologías */
+    #technologies ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
         width: 100%;
     }
 
-    #projects div {
-        text-align: center;
+    /* Ajustes de elementos de lista en tecnologías */
+    #technologies li {
+        width: 100%;
+        justify-content: flex-start;
     }
-}
 
-/*Estilos para el menú desplegable de categorías*/
-.dropdown .category {
-    padding: 12px 16px;
-    border: none;
-    width: 80px;
-    background-color: antiquewhite;
-    font-family: Agency FB, serif;
-    font-size: medium;
-    color: #6e1e00;
-}
+    /* Ajustes de enlaces en tecnologías */
+    #technologies li a {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
 
-/* Estilos para el menú desplegable */
-.dropdown-content {
-    display: block; /* Cambiado a block para permitir la transición */
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-}
+    /* Ajustes de contenedor de tecnologías de proyecto */
+    .project-tech {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
 
-.dropdown-content.show {
-    max-height: 400px; /* Ajusta este valor según el contenido */
-    opacity: 1;
-}
+    /* Ajustes de enlaces en tecnologías de proyecto */
+    .project-tech a {
+        margin: 5px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-/* Estilos para el menú desplegable */
-.dropdown-content-category {
-    display: block; /* Cambiado a block para permitir la transición */
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
-}
-
-.dropdown-content-category.show {
-    max-height: 400px; /* Ajusta este valor según el contenido */
-    opacity: 1;
+    /* Ajustes de contenedor de enlaces */
+    .links {
+        align-items: center;
+    }
 }
