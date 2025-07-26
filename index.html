@@ -3,16 +3,16 @@
 
 <!-- Sección head que contiene información meta, estilos y scripts -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <script src="src/js/script.js" defer></script>
     <title>Camilo Portfolio</title>
-    <link rel="icon" href="assets/images/logos/Logo.png" type="image/png">
+    <link rel="icon" href="src/images/logos/Logo.png" type="image/png" />
 </head>
 
-<!-- Sección body con evento onload para establecer el idioma inicial -->
-<body onload="setLanguage('en')">
+<!-- Sección body con evento onload para inicializar la aplicación -->
+<body onload="initializeApp()">
 
 <!-- Sección de encabezado con título y selector de idioma -->
 <div id="header">
@@ -63,42 +63,42 @@
     <ul>
         <li>
             <a href="https://www.java.com" target="_blank">
-                <img src="assets/images/logos/Java.png" alt="Java Logo" width="50" height="50">Java
+                <img src="src/images/logos/Java.png" alt="Java Logo" width="50" height="50">Java
             </a>
         </li>
         <li>
             <a href="https://dotnet.microsoft.com/en-us/languages/csharp" target="_blank">
-                <img src="assets/images/logos/CSharp.png" alt="C# Logo" width="50" height="50">C#
+                <img src="src/images/logos/CSharp.png" alt="C# Logo" width="50" height="50">C#
             </a>
         </li>
         <li>
             <a href="http://www.ecmascript.org" target="_blank">
-                <img src="assets/images/logos/JavaScript.png" alt="Javascript Logo" width="50" height="50">JavaScript
+                <img src="src/images/logos/JavaScript.png" alt="Javascript Logo" width="50" height="50">JavaScript
             </a>
         </li>
         <li>
             <a href="https://isocpp.org" target="_blank">
-                <img src="assets/images/logos/CPP.png" alt="C++ Logo" width="50" height="50">C++
+                <img src="src/images/logos/CPP.png" alt="C++ Logo" width="50" height="50">C++
             </a>
         </li>
         <li>
             <a href="https://unity.com" target="_blank">
-                <img src="assets/images/logos/Unity.png" alt="Unity Logo" width="50" height="50">Unity
+                <img src="src/images/logos/Unity.png" alt="Unity Logo" width="50" height="50">Unity
             </a>
         </li>
         <li>
             <a href="https://www.unrealengine.com/en-US" target="_blank">
-                <img src="assets/images/logos/Unreal.svg" alt="Unreal Engine Logo" width="50" height="50">Unreal Engine
+                <img src="src/images/logos/Unreal.svg" alt="Unreal Engine Logo" width="50" height="50">Unreal Engine
             </a>
         </li>
         <li>
             <a href="https://es.react.dev/" target="_blank">
-                <img src="assets/images/logos/React.png" alt="Godot Logo" width="50" height="50">React
+                <img src="src/images/logos/React.png" alt="Godot Logo" width="50" height="50">React
             </a>
         </li>
         <li>
             <a href="https://github.com/" target="_blank">
-                <img src="assets/images/logos/GitHub.png" alt="GitHub Logo" width="50" height="50">GitHub
+                <img src="src/images/logos/GitHub.png" alt="GitHub Logo" width="50" height="50">GitHub
             </a>
         </li>
     </ul>
@@ -135,10 +135,10 @@
                 </div>
                 <p id="mars-marine-desc"></p>
                 <a href="https://www.unrealengine.com/en-US" target="_blank">
-                    <img src="assets/images/logos/Unreal.svg" alt="Unreal Engine Logo" width="50" height="50">
+                    <img src="src/images/logos/Unreal.svg" alt="Unreal Engine Logo" width="50" height="50">
                 </a>
                 <a href="#" target="_blank">
-                    <img src="assets/images/logos/GitHub.png" alt="Git Hub pages Logo" width="50" height="50">
+                    <img src="src/images/logos/GitHub.png" alt="Git Hub pages Logo" width="50" height="50">
                 </a>
             </div>
         </li>
@@ -147,7 +147,7 @@
         <li class="unity">
             <a href="https://play.google.com/store/apps/details?id=com.TechNestGamesStudios.DungeonEscape"
                target="_blank">
-                <img src="assets/images/previews/DungeonEscape.png" alt="Space Shooter Pro Preview" width="347">
+                <img src="src/images/previews/DungeonEscape.png" alt="Space Shooter Pro Preview" width="347">
             </a>
             <div class="project-tech">
                 <div class="links">
@@ -156,13 +156,13 @@
                 </div>
                 <p id="dungeon-escape-desc"></p>
                 <a href="https://unity.com" target="_blank">
-                    <img src="assets/images/logos/Unity.png" alt="Unity Logo" width="50" height="50">
+                    <img src="src/images/logos/Unity.png" alt="Unity Logo" width="50" height="50">
                 </a>
                 <a href="https://dotnet.microsoft.com/en-us/languages/csharp" target="_blank">
-                    <img src="assets/images/logos/CSharp.png" alt="C# Logo" width="50" height="50">
+                    <img src="src/images/logos/CSharp.png" alt="C# Logo" width="50" height="50">
                 </a>
                 <a href="#" target="_blank">
-                    <img src="assets/images/logos/GitHub.png" alt="GitHub Logo" width="50" height="50">
+                    <img src="src/images/logos/GitHub.png" alt="GitHub Logo" width="50" height="50">
                 </a>
             </div>
         </li>
@@ -180,13 +180,13 @@
                 </div>
                 <p id="space-shooter-pro-desc"></p>
                 <a href="https://unity.com" target="_blank">
-                    <img src="assets/images/logos/Unity.png" alt="Unity Logo" width="50" height="50">
+                    <img src="src/images/logos/Unity.png" alt="Unity Logo" width="50" height="50">
                 </a>
                 <a href="https://dotnet.microsoft.com/en-us/languages/csharp" target="_blank">
-                    <img src="assets/images/logos/CSharp.png" alt="C# Logo" width="50" height="50">
+                    <img src="src/images/logos/CSharp.png" alt="C# Logo" width="50" height="50">
                 </a>
                 <a href="#" target="_blank">
-                    <img src="assets/images/logos/GitHub.png" alt="GitHub Logo" width="50" height="50">
+                    <img src="src/images/logos/GitHub.png" alt="GitHub Logo" width="50" height="50">
                 </a>
             </div>
         </li>
@@ -194,7 +194,7 @@
         <!-- Proyecto Promedios UNAL - Web -->
         <li class="web">
             <a href="https://promediosunal.github.io/promediosunal/" target="_blank">
-                <img src="assets/images/previews/PUN.jpg" alt="Promedios Unal Preview" width="347" height="200">
+                <img src="src/images/previews/PUN.jpg" alt="Promedios Unal Preview" width="347" height="200">
             </a>
             <div class="project-tech">
                 <div class="links">
@@ -203,10 +203,10 @@
                     <p id="promedios-unal-desc"></p>
                 </div>
                 <a href="http://www.ecmascript.org" target="_blank">
-                    <img src="assets/images/logos/JavaScript.png" alt="Javascript Logo" width="50" height="50">
+                    <img src="src/images/logos/JavaScript.png" alt="Javascript Logo" width="50" height="50">
                 </a>
                 <a href="#" target="_blank">
-                    <img src="assets/images/logos/GitHub.png" alt="GitHub Logo" width="50" height="50">
+                    <img src="src/images/logos/GitHub.png" alt="GitHub Logo" width="50" height="50">
                 </a>
             </div>
         </li>
@@ -214,7 +214,7 @@
         <!-- Proyecto Reloj - Embebido -->
         <li class="embedded">
             <a href="https://github.com/its-camilo/Clock" target="_blank">
-                <img id="clock-carousel" src="assets/images/previews/Reloj/0.jpg" alt="Clock Preview" width="347"
+                <img id="clock-carousel" src="src/images/previews/Reloj/0.jpg" alt="Clock Preview" width="347"
                      height="240">
             </a>
             <div class="project-tech">
@@ -224,7 +224,7 @@
                     <p id="clock-desc"></p>
                 </div>
                 <a href="https://isocpp.org" target="_blank">
-                    <img src="assets/images/logos/CPP.png" alt="C++ Logo" width="50" height="50">
+                    <img src="src/images/logos/CPP.png" alt="C++ Logo" width="50" height="50">
                 </a>
             </div>
         </li>
@@ -242,13 +242,13 @@
                     <p id="the-great-fleece-desc"></p>
                 </div>
                 <a href="https://unity.com" target="_blank">
-                    <img src="assets/images/logos/Unity.png" alt="Unity Logo" width="50" height="50">
+                    <img src="src/images/logos/Unity.png" alt="Unity Logo" width="50" height="50">
                 </a>
                 <a href="https://dotnet.microsoft.com/en-us/languages/csharp" target="_blank">
-                    <img src="assets/images/logos/CSharp.png" alt="C# Logo" width="50" height="50">
+                    <img src="src/images/logos/CSharp.png" alt="C# Logo" width="50" height="50">
                 </a>
                 <a href="#" target="_blank">
-                    <img src="assets/images/logos/GitHub.png" alt="GitHub Logo" width="50" height="50">
+                    <img src="src/images/logos/GitHub.png" alt="GitHub Logo" width="50" height="50">
                 </a>
             </div>
         </li>
@@ -256,7 +256,7 @@
         <!-- Proyecto MoodPress - Apps -->
         <li class="apps">
             <a href="https://github.com/JohnFPy/LosInadaptados" target="_blank">
-                <img id="moodpress-carousel" src="assets/images/previews/MoodPress/0.png" alt="MoodPress Preview" width="347"
+                <img id="moodpress-carousel" src="src/images/previews/MoodPress/0.png" alt="MoodPress Preview" width="347"
                      height="240">
             </a>
             <div class="project-tech">
@@ -266,10 +266,10 @@
                 </div>
                 <p id="moodpress-desc"></p>
                 <a href="https://dotnet.microsoft.com/en-us/languages/csharp" target="_blank">
-                    <img src="assets/images/logos/CSharp.png" alt="C# Logo" width="50" height="50">
+                    <img src="src/images/logos/CSharp.png" alt="C# Logo" width="50" height="50">
                 </a>
                 <a href="#" target="_blank">
-                    <img src="assets/images/logos/GitHub.png" alt="GitHub Logo" width="50" height="50">
+                    <img src="src/images/logos/GitHub.png" alt="GitHub Logo" width="50" height="50">
                 </a>
             </div>
         </li>
