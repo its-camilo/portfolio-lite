@@ -25,6 +25,8 @@ function setLanguage(language) {
             dungeonescapeDesc: "Can you defeat the monsters, collect the diamonds, and escape before it's too late? The dungeon awaits!. Made with Unity and C#.",
             clock: "Clock",
             clockDesc: "A clock and temperature and humidity sensor that sends the data to ThingSpeak and can be controlled through buttons or a web terminal. Made with C++.",
+            moodpress: "MoodPress",
+            moodpressDesc: "MoodPress is a wellness-oriented application that allows users to track their daily mood. Through consistent logging, the app seeks to identify patterns in the user's mood and offer personalized mental health tips and advice to help improve their quality of life. Made as a team project with C#.",
         },
         es: {
             pageTitle: "Portafolio de Proyectos",
@@ -50,6 +52,8 @@ function setLanguage(language) {
             dungeonescapeDesc: "¿Puedes derrotar a los monstruos, recoger los diamantes y escapar antes de que sea demasiado tarde? ¡La mazmorras te esperan!. Hecho con Unity y C#.",
             clock: "Reloj",
             clockDesc: "Un reloj y sensor de temperatura y humedad que envía los datos a ThingSpeak y se puede controlar a través de botones o un terminal web. Hecho con C++.",
+            moodpress: "MoodPress",
+            moodpressDesc: "MoodPress es una aplicación orientada al bienestar emocional que permite a los usuarios llevar un seguimiento diario de su estado de ánimo. A través del registro constante, la app busca identificar patrones en el ánimo del usuario y ofrecer consejos y tips personalizados de salud mental que ayuden a mejorar su calidad de vida. Hecho en equipo de trabajo con C#.",
         }
     };
 
@@ -76,6 +80,8 @@ function setLanguage(language) {
     document.getElementById("dungeon-escape-desc").textContent = texts[language].dungeonescapeDesc;
     document.getElementById("clock").textContent = texts[language].clock;
     document.getElementById("clock-desc").textContent = texts[language].clockDesc;
+    document.getElementById("moodpress").textContent = texts[language].moodpress;
+    document.getElementById("moodpress-desc").textContent = texts[language].moodpressDesc;
 
     // Actualiza todos los elementos con la clase "repo"
     const repoElements = document.getElementsByClassName("repo");
@@ -169,6 +175,40 @@ document.addEventListener('DOMContentLoaded', function () {
             isHovering = false;
             clearInterval(carouselInterval);
             carouselInterval = null;
+        });
+    }
+
+    // Carrusel para MoodPress
+    const moodpressCarousel = document.getElementById('moodpress-carousel');
+    if (moodpressCarousel) {
+        // Arreglo con las URLs de las imágenes para el carrusel de MoodPress
+        const moodpressImages = [
+            moodpressCarousel.src,
+            "assets/images/previews/MoodPress/1.png",
+            "assets/images/previews/MoodPress/2.png",
+            "assets/images/previews/MoodPress/3.png",
+        ];
+
+        let moodpressIndex = 0;
+        let moodpressInterval;
+
+        // Cambia la imagen actual del carrusel de MoodPress
+        function changeMoodpressImage() {
+            moodpressIndex = (moodpressIndex + 1) % moodpressImages.length;
+            moodpressCarousel.src = moodpressImages[moodpressIndex];
+        }
+
+        // Inicia el carrusel al pasar el mouse sobre la imagen
+        moodpressCarousel.addEventListener('mouseenter', function () {
+            if (!moodpressInterval) {
+                moodpressInterval = setInterval(changeMoodpressImage, 1500);
+            }
+        });
+
+        // Detiene el carrusel cuando el mouse sale de la imagen
+        moodpressCarousel.addEventListener('mouseleave', function () {
+            clearInterval(moodpressInterval);
+            moodpressInterval = null;
         });
     }
 });

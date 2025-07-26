@@ -223,11 +223,18 @@ p {
     text-align: center;
 }
 
-/* Imágenes de proyectos */
-#projects img {
+/* Imágenes de proyectos - solo para previews */
+#projects > ul > li > a > img {
     border-radius: 8px;
-    max-height: 300px;
+    height: auto;
     max-width: 400px;
+    width: 347px;
+}
+
+/* Imágenes de logos en proyectos - mantener dimensiones normales */
+#projects .project-tech img {
+    height: 50px;
+    width: 50px;
 }
 
 /* Elementos de lista en proyectos */
