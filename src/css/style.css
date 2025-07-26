@@ -1,0 +1,374 @@
+/* Estilo de los enlaces */
+a {
+    color: sandybrown;
+    text-decoration: none;
+}
+
+/* Efecto hover en enlaces */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos generales del cuerpo de la página */
+body {
+    background-color: white;
+    color: #6e1e00;
+    font-family: math;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Color de los títulos principales */
+h1 {
+    color: #6e1e00;
+}
+
+/* Color de los subtítulos */
+h2 {
+    color: sandybrown;
+}
+
+/* Ancho máximo de los párrafos */
+p {
+    max-width: 400px;
+}
+
+/* Contenedor del menú desplegable */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+/* Botón de categoría en el menú desplegable */
+.dropdown .category {
+    background-color: antiquewhite;
+    border: none;
+    color: #6e1e00;
+    font-family: Agency FB, serif;
+    font-size: medium;
+    padding: 12px 16px;
+    width: 80px;
+}
+
+/* Contenedor del contenido desplegable */
+.dropdown-content {
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    display: none;
+    min-width: 80px;
+    position: absolute;
+    z-index: 1;
+}
+
+/* Animación del contenido desplegable */
+.dropdown-content {
+    display: block;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+/* Enlaces dentro del menú desplegable */
+.dropdown-content a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+
+/* Efecto hover en enlaces del menú desplegable */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Contenedor de categorías desplegables */
+.dropdown-content-category {
+    display: block;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+/* Clase para mostrar categorías desplegables */
+.dropdown-content-category.show {
+    max-height: 400px;
+    opacity: 1;
+}
+
+/* Clase para mostrar contenido desplegable */
+.dropdown-content.show {
+    max-height: 400px;
+    opacity: 1;
+}
+
+/* Efecto hover en el botón de categoría */
+.dropdown:hover .category {
+    background-color: sandybrown;
+    color: white;
+}
+
+/* Mostrar contenido al hacer hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Mostrar categorías al hacer hover */
+.dropdown:hover .dropdown-content-category {
+    max-height: 200px;
+    opacity: 1;
+}
+
+/* Efecto hover en el selector de idioma */
+.dropdown:hover .language {
+    background-color: sandybrown;
+    color: white;
+}
+
+/* Estilo del selector de idioma */
+.language {
+    background-color: antiquewhite;
+    border: none;
+    color: #6e1e00;
+    font-family: Agency FB, serif;
+    font-size: medium;
+    padding: 12px 16px;
+    width: 80px;
+}
+
+/* Contenedor de enlaces */
+.links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Fila de enlaces */
+.links-row {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+/* Enlaces dentro de las filas */
+.links-row a {
+    padding: 5px 5px;
+}
+
+/* Contenedor de tecnologías de proyecto */
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Párrafos dentro de tecnologías de proyecto */
+.project-tech p {
+    width: 100%;
+}
+
+/* Cabecera de la página */
+#header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+/* Párrafos en sección personal */
+#personal p {
+    display: contents;
+}
+
+/* Sección de presentación */
+#presentation {
+    align-items: center;
+    background: antiquewhite;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Subtítulos en presentación */
+#presentation h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Imagen de perfil */
+#presentation img {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Párrafos en presentación */
+#presentation p {
+    margin: 0 15px;
+    text-align: center;
+}
+
+/* Estilos comunes de secciones principales */
+#presentation, #technologies, #projects, #personal {
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Contenedores en sección de proyectos */
+#projects div {
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Imágenes de proyectos - solo para previews */
+#projects > ul > li > a > img {
+    border-radius: 8px;
+    height: auto;
+    max-width: 400px;
+    width: 347px;
+}
+
+/* Imágenes de logos en proyectos - mantener dimensiones normales */
+#projects .project-tech img {
+    height: 50px;
+    width: 50px;
+}
+
+/* Elementos de lista en proyectos */
+#projects li {
+    align-items: center;
+    border-bottom: 1px solid sandybrown;
+    display: inline-flex;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    width: 100%;
+}
+
+/* Enlaces en elementos de lista de proyectos */
+#projects li a {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+/* Párrafos en proyectos */
+#projects p {
+    font-size: 16px;
+    margin: 15px 0;
+    text-align: justify;
+}
+
+/* Lista de proyectos */
+#projects ul {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+
+/* Imágenes en sección de tecnologías */
+#technologies img {
+    height: 40px;
+    margin-right: 10px;
+    width: 40px;
+}
+
+/* Efecto hover en imágenes */
+#technologies img:hover, #projects img:hover {
+    filter: brightness(113%);
+}
+
+/* Elementos de lista en tecnologías */
+#technologies li {
+    align-items: center;
+    display: flex;
+    margin: 10px 20px;
+}
+
+/* Lista de tecnologías */
+#technologies ul {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+}
+
+/* Fondo de secciones principales */
+#technologies, #projects {
+    background: #ffffff;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Ajustes de contenedores de proyectos */
+    #projects div {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Garantizar que el dropdown de categorías permanezca en la izquierda */
+    #projects .dropdown {
+        align-self: flex-start;
+        text-align: left;
+        margin-left: 0;
+    }
+
+    /* Ajustes de imágenes en proyectos */
+    #projects img {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* Ajustes de elementos de lista en proyectos */
+    #projects li {
+        flex-direction: column;
+        max-height: none;
+    }
+
+    /* Grid para lista de tecnologías */
+    #technologies ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
+    }
+
+    /* Ajustes de elementos de lista en tecnologías */
+    #technologies li {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    /* Ajustes de enlaces en tecnologías */
+    #technologies li a {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Ajustes de contenedor de tecnologías de proyecto */
+    .project-tech {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Ajustes de enlaces en tecnologías de proyecto */
+    .project-tech a {
+        margin: 5px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Ajustes de contenedor de enlaces */
+    .links {
+        align-items: center;
+    }
+}
