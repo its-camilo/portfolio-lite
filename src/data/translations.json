@@ -24,7 +24,9 @@
         "clock": "Clock",
         "clockDesc": "A clock and temperature and humidity sensor that sends the data to ThingSpeak and can be controlled through buttons or a web terminal. Made with C++.",
         "moodpress": "MoodPress",
-        "moodpressDesc": "A wellness application for daily mood tracking that identifies patterns and provides personalized mental health tips. Made as a team project with C#."
+        "moodpressDesc": "A wellness application for daily mood tracking that identifies patterns and provides personalized mental health tips. Made as a team project with C#.",
+        "schedulegenerator": "Schedule Generator",
+        "schedulegeneratorDesc": "This is a single-page web application designed to help university students generate personalized schedules based on their courses, groups, and priorities. Everything runs in the browser, no installation or accounts required."
     },
     "es": {
         "pageTitle": "Portafolio de Proyectos",
@@ -51,6 +53,8 @@
         "clock": "Reloj",
         "clockDesc": "Un reloj y sensor de temperatura y humedad que envía los datos a ThingSpeak y se puede controlar a través de botones o un terminal web. Hecho con C++.",
         "moodpress": "MoodPress",
-        "moodpressDesc": "Una aplicación de bienestar para el seguimiento diario del estado de ánimo que identifica patrones y ofrece consejos personalizados de salud mental. Hecho en equipo de trabajo con C#."
+        "moodpressDesc": "Una aplicación de bienestar para el seguimiento diario del estado de ánimo que identifica patrones y ofrece consejos personalizados de salud mental. Hecho en equipo de trabajo con C#.",
+        "schedulegenerator": "Generador de Horarios",
+        "schedulegeneratorDesc": "Esta es una aplicación web de una sola página diseñada para ayudar a estudiantes universitarios a generar horarios personalizados según sus materias, grupos y prioridades. Todo se gestiona en el navegador, sin necesidad de instalar nada ni crear cuentas."
     }
 }

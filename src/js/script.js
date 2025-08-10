@@ -64,6 +64,8 @@ function setLanguage(language) {
     updateElement("clock-desc", texts.clockDesc);
     updateElement("moodpress", texts.moodpress);
     updateElement("moodpress-desc", texts.moodpressDesc);
+    updateElement("schedulegenerator", texts.schedulegenerator);
+    updateElement("schedulegenerator-desc", texts.schedulegeneratorDesc);
 
     // Actualiza todos los elementos con la clase "repo"
     const repoElements = document.getElementsByClassName("repo");
@@ -193,6 +195,35 @@ document.addEventListener('DOMContentLoaded', function () {
         moodpressCarousel.addEventListener('mouseleave', function () {
             clearInterval(moodpressInterval);
             moodpressInterval = null;
+        });
+    }
+
+    // Carrusel para Schedule Generator
+    const scheduleCarousel = document.getElementById('schedule-generator-carousel');
+    if (scheduleCarousel) {
+        const scheduleImages = [
+            scheduleCarousel.src,
+            "src/images/previews/Schedule Generator/1.png",
+            "src/images/previews/Schedule Generator/2.png",
+        ];
+
+        let scheduleIndex = 0;
+        let scheduleInterval;
+
+        function changeScheduleImage() {
+            scheduleIndex = (scheduleIndex + 1) % scheduleImages.length;
+            scheduleCarousel.src = scheduleImages[scheduleIndex];
+        }
+
+        scheduleCarousel.addEventListener('mouseenter', function () {
+            if (!scheduleInterval) {
+                scheduleInterval = setInterval(changeScheduleImage, 1500);
+            }
+        });
+
+        scheduleCarousel.addEventListener('mouseleave', function () {
+            clearInterval(scheduleInterval);
+            scheduleInterval = null;
         });
     }
 });
