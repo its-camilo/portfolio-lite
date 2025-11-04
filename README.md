@@ -4,8 +4,6 @@
 
 **Portafolio web interactivo y responsive que muestra mis proyectos de desarrollo de software, videojuegos y hardware**
 
-[Ver Portfolio]([https://its-camilo.github.io/portfolio/])
-
 </div>
 
 ---
