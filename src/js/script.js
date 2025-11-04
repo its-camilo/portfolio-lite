@@ -66,6 +66,8 @@ function setLanguage(language) {
     updateElement("moodpress-desc", texts.moodpressDesc);
     updateElement("schedulegenerator", texts.schedulegenerator);
     updateElement("schedulegenerator-desc", texts.schedulegeneratorDesc);
+    updateElement("ecommerce", texts.ecommerce);
+    updateElement("ecommerce-desc", texts.ecommerceDesc);
 
     // Actualiza todos los elementos con la clase "repo"
     const repoElements = document.getElementsByClassName("repo");
@@ -227,6 +229,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
-// Carga inicial de traducciones
-loadTranslations();

@@ -26,7 +26,9 @@
         "moodpress": "MoodPress",
         "moodpressDesc": "A wellness application for daily mood tracking that identifies patterns and provides personalized mental health tips. Made as a team project with C#.",
         "schedulegenerator": "Schedule Generator",
-        "schedulegeneratorDesc": "This is a single-page web application designed to help university students generate personalized schedules based on their courses, groups, and priorities. Everything runs in the browser, no installation or accounts required."
+        "schedulegeneratorDesc": "This is a single-page web application designed to help university students generate personalized schedules based on their courses, groups, and priorities. Everything runs in the browser, no installation or accounts required.",
+        "ecommerce": "Ecommerce",
+        "ecommerceDesc": "A complete e-commerce web application built with JavaScript. Features include product catalog, shopping cart, and user management. Available as a web app and mobile application on Google Play."
     },
     "es": {
         "pageTitle": "Portafolio de Proyectos",
@@ -55,6 +57,8 @@
         "moodpress": "MoodPress",
         "moodpressDesc": "Una aplicación de bienestar para el seguimiento diario del estado de ánimo que identifica patrones y ofrece consejos personalizados de salud mental. Hecho en equipo de trabajo con C#.",
         "schedulegenerator": "Generador de Horarios",
-        "schedulegeneratorDesc": "Esta es una aplicación web de una sola página diseñada para ayudar a estudiantes universitarios a generar horarios personalizados según sus materias, grupos y prioridades. Todo se gestiona en el navegador, sin necesidad de instalar nada ni crear cuentas."
+        "schedulegeneratorDesc": "Esta es una aplicación web de una sola página diseñada para ayudar a estudiantes universitarios a generar horarios personalizados según sus materias, grupos y prioridades. Todo se gestiona en el navegador, sin necesidad de instalar nada ni crear cuentas.",
+        "ecommerce": "Ecommerce",
+        "ecommerceDesc": "Una aplicación web de comercio electrónico completa construida con JavaScript. Incluye catálogo de productos, carrito de compras y gestión de usuarios. Disponible como aplicación web y aplicación móvil en Google Play."
     }
 }
