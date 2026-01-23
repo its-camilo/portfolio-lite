@@ -68,6 +68,8 @@ function setLanguage(language) {
     updateElement("schedulegenerator-desc", texts.schedulegeneratorDesc);
     updateElement("ecommerce", texts.ecommerce);
     updateElement("ecommerce-desc", texts.ecommerceDesc);
+    updateElement("healthscope", texts.healthScope);
+    updateElement("health-scope-desc", texts.healthScopeDesc);
 
     // Actualiza todos los elementos con la clase "repo"
     const repoElements = document.getElementsByClassName("repo");
@@ -226,6 +228,34 @@ document.addEventListener('DOMContentLoaded', function () {
         scheduleCarousel.addEventListener('mouseleave', function () {
             clearInterval(scheduleInterval);
             scheduleInterval = null;
+        });
+    }
+
+    // Carrusel para Health Scope
+    const healthScopeCarousel = document.getElementById('health-scope-carousel');
+    if (healthScopeCarousel) {
+        const healthScopeImages = [
+            healthScopeCarousel.src,
+            "src/images/previews/Health Scope/1.png",
+        ];
+
+        let healthScopeIndex = 0;
+        let healthScopeInterval;
+
+        function changeHealthScopeImage() {
+            healthScopeIndex = (healthScopeIndex + 1) % healthScopeImages.length;
+            healthScopeCarousel.src = healthScopeImages[healthScopeIndex];
+        }
+
+        healthScopeCarousel.addEventListener('mouseenter', function () {
+            if (!healthScopeInterval) {
+                healthScopeInterval = setInterval(changeHealthScopeImage, 1500);
+            }
+        });
+
+        healthScopeCarousel.addEventListener('mouseleave', function () {
+            clearInterval(healthScopeInterval);
+            healthScopeInterval = null;
         });
     }
 });
