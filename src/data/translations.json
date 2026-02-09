@@ -30,7 +30,9 @@
         "ecommerce": "Ecommerce",
         "ecommerceDesc": "A complete e-commerce web application built with JavaScript. Features include product catalog, shopping cart, and user management. Available as a web app and mobile application on Google Play.",
         "healthScope": "Health Scope",
-        "healthScopeDesc": "A comprehensive health and wellness application that leverages Gemini AI to provide personalized health insights. It features AI-driven analysis that provides an overall health score, general recommendations, and alopecia risk assessment."
+        "healthScopeDesc": "A comprehensive health and wellness application that leverages Gemini AI to provide personalized health insights. It features AI-driven analysis that provides an overall health score, general recommendations, and alopecia risk assessment.",
+        "agenticNodes": "Agentic Nodes",
+        "agenticNodesDesc": "AI-powered supply chain simulation platform. Describe your procurement needs in natural language and let autonomous agents discover suppliers, plan shipping routes, negotiate pricing, and build execution plans — all in real time."
     },
     "es": {
         "pageTitle": "Portafolio de Proyectos",
@@ -63,6 +65,8 @@
         "ecommerce": "Ecommerce",
         "ecommerceDesc": "Una aplicación web de comercio electrónico completa construida con JavaScript. Incluye catálogo de productos, carrito de compras y gestión de usuarios. Disponible como aplicación web y aplicación móvil en Google Play.",
         "healthScope": "Health Scope",
-        "healthScopeDesc": "Una aplicación integral de salud y bienestar que aprovecha la IA de Gemini para ofrecer información personalizada. Incluye un análisis de IA que determina el puntaje general de salud, recomendaciones generales y riesgo de alopecia."
+        "healthScopeDesc": "Una aplicación integral de salud y bienestar que aprovecha la IA de Gemini para ofrecer información personalizada. Incluye un análisis de IA que determina el puntaje general de salud, recomendaciones generales y riesgo de alopecia.",
+        "agenticNodes": "Agentic Nodes",
+        "agenticNodesDesc": "Plataforma de simulación de cadena de suministro impulsada por IA. Describe tus necesidades de adquisición en lenguaje natural y deja que agentes autónomos descubran proveedores, planifiquen rutas de envío, negocien precios y creen planes de ejecución, todo en tiempo real."
     }
 }

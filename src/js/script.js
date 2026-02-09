@@ -70,6 +70,8 @@ function setLanguage(language) {
     updateElement("ecommerce-desc", texts.ecommerceDesc);
     updateElement("healthscope", texts.healthScope);
     updateElement("health-scope-desc", texts.healthScopeDesc);
+    updateElement("agentic-nodes", texts.agenticNodes);
+    updateElement("agentic-nodes-desc", texts.agenticNodesDesc);
 
     // Actualiza todos los elementos con la clase "repo"
     const repoElements = document.getElementsByClassName("repo");
@@ -256,6 +258,35 @@ document.addEventListener('DOMContentLoaded', function () {
         healthScopeCarousel.addEventListener('mouseleave', function () {
             clearInterval(healthScopeInterval);
             healthScopeInterval = null;
+        });
+    }
+
+    // Carrusel para Agentic Nodes
+    const agenticNodesCarousel = document.getElementById('agentic-nodes-carousel');
+    if (agenticNodesCarousel) {
+        const agenticNodesImages = [
+            agenticNodesCarousel.src,
+            "src/images/previews/Agentic Nodes/1.png",
+            "src/images/previews/Agentic Nodes/2.png",
+        ];
+
+        let agenticNodesIndex = 0;
+        let agenticNodesInterval;
+
+        function changeAgenticNodesImage() {
+            agenticNodesIndex = (agenticNodesIndex + 1) % agenticNodesImages.length;
+            agenticNodesCarousel.src = agenticNodesImages[agenticNodesIndex];
+        }
+
+        agenticNodesCarousel.addEventListener('mouseenter', function () {
+            if (!agenticNodesInterval) {
+                agenticNodesInterval = setInterval(changeAgenticNodesImage, 1500);
+            }
+        });
+
+        agenticNodesCarousel.addEventListener('mouseleave', function () {
+            clearInterval(agenticNodesInterval);
+            agenticNodesInterval = null;
         });
     }
 });
